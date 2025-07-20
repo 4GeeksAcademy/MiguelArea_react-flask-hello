@@ -10,6 +10,10 @@ from api.models import db
 from api.routes import api
 from api.admin import setup_admin
 from api.commands import setup_commands
+from flask_cors import CORS
+
+app = Flask(__name__)
+CORS(app, supports_credentials=True, origins="*", allow_headers="*", methods=["GET", "POST", "OPTIONS"])
 
 # from models import Person
 
